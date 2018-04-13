@@ -10,10 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var textFieldCell: NSTextFieldCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        textFieldCell.stringValue = "Hello, World!"
     }
 
     override var representedObject: Any? {
@@ -22,6 +23,9 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func saveAction(_ sender: Any) {
+        textFieldCell.stringValue = "Save button pressed"
+    }
+    
 }
 
