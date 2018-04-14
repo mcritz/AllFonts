@@ -92,7 +92,9 @@ class FontInfoController {
     func save() {
         let maybeDocURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         if let docURL: URL = maybeDocURL {
-            let fileUrl: URL = docURL.appendingPathComponent("-fonts.json")
+            let systemVersion = ProcessInfo.processInfo.operatingSystemVersion
+            let osString = "\(systemVersion.majorVersion).\(systemVersion.minorVersion)"
+            let fileUrl: URL = docURL.appendingPathComponent("macOS-\(osString)-fonts.json")
             do {
                 let maybeJSON = try getJSON(from: fontInfo.fontFamilies)
                 if let fontJSON: Data = maybeJSON {
