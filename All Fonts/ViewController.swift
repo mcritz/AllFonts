@@ -12,9 +12,11 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var textFieldCell: NSTextFieldCell!
     
+    let fontInfoController = FontInfoController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldCell.stringValue = "Hello, World!"
+        textFieldCell.stringValue = fontInfoController.summary()
     }
 
     override var representedObject: Any? {
@@ -24,7 +26,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
-        textFieldCell.stringValue = "Save button pressed"
+        fontInfoController.save()
     }
     
 }

@@ -13,9 +13,9 @@
 		0FABE3D4208025810075B25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FABE3D2208025810075B25D /* Main.storyboard */; };
 		0FABE3E0208025810075B25D /* All_FontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3DF208025810075B25D /* All_FontsTests.swift */; };
 		0FABE3EB208025810075B25D /* All_FontsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3EA208025810075B25D /* All_FontsUITests.swift */; };
-		0FABE3F92080271F0075B25D /* FontDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontDataController.swift */; };
-		0FABE3FA2080271F0075B25D /* FontDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontDataController.swift */; };
-		0FABE3FB2080271F0075B25D /* FontDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontDataController.swift */; };
+		0FABE3F92080271F0075B25D /* FontInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontInfoController.swift */; };
+		0FABE3FA2080271F0075B25D /* FontInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontInfoController.swift */; };
+		0FABE3FB2080271F0075B25D /* FontInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		0FABE3E6208025810075B25D /* All FontsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All FontsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FABE3EA208025810075B25D /* All_FontsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_FontsUITests.swift; sourceTree = "<group>"; };
 		0FABE3EC208025810075B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FABE3F82080271F0075B25D /* FontDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDataController.swift; sourceTree = "<group>"; };
+		0FABE3F82080271F0075B25D /* FontInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				0FABE3D2208025810075B25D /* Main.storyboard */,
 				0FABE3D5208025810075B25D /* Info.plist */,
 				0FABE3D6208025810075B25D /* All_Fonts.entitlements */,
-				0FABE3F82080271F0075B25D /* FontDataController.swift */,
+				0FABE3F82080271F0075B25D /* FontInfoController.swift */,
 				0F39C96A2080E3E8004D0F9F /* AllMacFonts.playground */,
 			);
 			path = "All Fonts";
@@ -262,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FABE3CF2080257F0075B25D /* ViewController.swift in Sources */,
-				0FABE3F92080271F0075B25D /* FontDataController.swift in Sources */,
+				0FABE3F92080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FABE3CD2080257F0075B25D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FABE3FA2080271F0075B25D /* FontDataController.swift in Sources */,
+				0FABE3FA2080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FABE3E0208025810075B25D /* All_FontsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FABE3FB2080271F0075B25D /* FontDataController.swift in Sources */,
+				0FABE3FB2080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FABE3EB208025810075B25D /* All_FontsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
