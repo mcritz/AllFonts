@@ -21,15 +21,35 @@ class All_FontsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testFontInfo() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let testFontInfo = FontInfo()
+        XCTAssertGreaterThan(testFontInfo.allFontFamilies.count, 0)
+        XCTAssertEqual(testFontInfo.fontFamilies.count, 0)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+    func testMakeFontFamily() {
+        let testFontInfoController = FontInfoController()
+        let testFamilyName = "FooBar"
+        let fooBarFamily = testFontInfoController.makeFontFamily(with: testFamilyName)
+        XCTAssertEqual(fooBarFamily.name, testFamilyName, "Font family should exist with the same name.")
+        XCTAssertEqual(fooBarFamily.fonts.count, 0, "There should be no fonts for font family 'FooBar'.")
+        let helveticaFamily = testFontInfoController.makeFontFamily(with: "Helvetica")
+        XCTAssertGreaterThan(helveticaFamily.fonts.count, 0, "There should be fonts in Helvetica family")
+    }
+    
+    func testGetFamilies() {
+        let familes = ["Arial", "Helvetica"]
+        let testFontInfoController = FontInfoController()
+        let result = testFontInfoController.getFamiles(from: familes)
+        XCTAssertEqual(result.count, familes.count)
+    }
+    
+    func testPerformanceGetFamilies() {
         self.measure {
-            // Put the code you want to measure the time of here.
+            let testFontInfoController = FontInfoController()
+            _ = testFontInfoController.summary()
         }
     }
     
