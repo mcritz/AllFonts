@@ -79,9 +79,13 @@ class FontInfoController {
     
     // Mark - Saving
     
-    private func getJSON(from data: [FontFamily]) throws -> Data?  {
+    func getJSON(from data: [FontFamily]?) throws -> Data?  {
+        var fontFamilies = data
+        if data?.count == nil {
+            fontFamilies = fontInfo.fontFamilies
+        }
         do {
-            let jsonEncoded = try encoder.encode(data)
+            let jsonEncoded = try encoder.encode(fontFamilies)
             return jsonEncoded
         } catch {
             print("Could not encode")
@@ -89,17 +93,25 @@ class FontInfoController {
         return nil
     }
     
-    func save() {
-        let maybeDocURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        if let docURL: URL = maybeDocURL {
-            let systemVersion = ProcessInfo.processInfo.operatingSystemVersion
-            let osString = "\(systemVersion.majorVersion).\(systemVersion.minorVersion)"
-            let fileUrl: URL = docURL.appendingPathComponent("macOS-\(osString)-fonts.json")
+    func fileName() -> String {
+        let systemVersion = ProcessInfo.processInfo.operatingSystemVersion
+        return "macOS-\(systemVersion.majorVersion).\(systemVersion.minorVersion)-fonts.json"
+    }
+    
+    func save(at location: URL?) throws {
+        var fileLocation = location
+        if location == nil {
+            let maybeDocURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            if let docURL: URL = maybeDocURL {
+                fileLocation = docURL
+            }
+        }
+        if let realLocation: URL = fileLocation {
             do {
                 let maybeJSON = try getJSON(from: fontInfo.fontFamilies)
                 if let fontJSON: Data = maybeJSON {
-                    try fontJSON.write(to: fileUrl)
-                    print("file saved: \(fileUrl)")
+                    try fontJSON.write(to: realLocation)
+                    print("file saved: \(realLocation)")
                 }
             } catch {
                 print("!!!")

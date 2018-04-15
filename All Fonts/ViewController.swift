@@ -6,7 +6,7 @@
 //  Copyright © 2018 Michael Critz. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
 class ViewController: NSViewController {
 
@@ -26,7 +26,23 @@ class ViewController: NSViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
-        fontInfoController.save()
+//        fontInfoController.save()
+        guard let window = view.window else {
+            return
+        }
+        let panel = NSSavePanel()
+        panel.directoryURL = FileManager.default.homeDirectoryForCurrentUser
+        panel.nameFieldStringValue = fontInfoController.fileName()
+        panel.beginSheetModal(for: window) { (result) in
+            if result == NSApplication.ModalResponse.OK,
+                let url = panel.url {
+                    do {
+                        try self.fontInfoController.save(at: url)
+                    } catch {
+                        print("Couldn't save")
+                    }
+                }
+        }
     }
     
 }
