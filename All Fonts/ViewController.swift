@@ -8,16 +8,6 @@
 
 import AppKit
 
-class FontsMenuController: NSMenu {
-    
-}
-
-class FileMenu: NSMenu {
-    @IBAction func save(_ sender: Any) {
-        
-    }
-}
-
 class ViewController: NSViewController {
 
     @IBOutlet weak var textFieldCell: NSTextFieldCell!
