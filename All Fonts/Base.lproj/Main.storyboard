@@ -95,6 +95,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
+                                            <accessibility description="Save" identifier="Save"/>
                                             <connections>
                                                 <action selector="saveAction:" target="Ady-hI-5gd" id="usu-bY-9R9"/>
                                             </connections>

@@ -26,7 +26,6 @@ class ViewController: NSViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
-//        fontInfoController.save()
         guard let window = view.window else {
             return
         }

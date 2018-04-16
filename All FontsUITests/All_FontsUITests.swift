@@ -28,7 +28,7 @@ class All_FontsUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testUI() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
@@ -38,6 +38,12 @@ class All_FontsUITests: XCTestCase {
         XCTAssert(allFontsWindow.buttons["Save"].exists)
         
         
+        let app = XCUIApplication()
+        let menuBarsQuery = app.menuBars
+        let fileMenuBarItem = menuBarsQuery.menuBarItems["File"]
+        fileMenuBarItem.click()
+        XCTAssert(menuBarsQuery/*@START_MENU_TOKEN@*/.menuItems["Save"]/*[[".menuBarItems[\"File\"]",".menus",".menuItems[\"Save…\"]",".menuItems[\"Save\"]"],[[[-1,3],[-1,2],[-1,1,2],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssert(menuBarsQuery/*@START_MENU_TOKEN@*/.menuItems["Save"]/*[[".menuBarItems[\"File\"]",".menus",".menuItems[\"Save…\"]",".menuItems[\"Save\"]"],[[[-1,3],[-1,2],[-1,1,2],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0]]@END_MENU_TOKEN@*/.isEnabled)
     }
     
 }
