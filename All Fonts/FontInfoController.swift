@@ -23,7 +23,7 @@ struct FontInfo {
     var fontFamilies = [FontFamily]()
 }
 
-class FontInfoController {
+class FontInfoController: NSObject {
     let baseFontSize: CGFloat = 24
     var fontInfo = FontInfo()
     let encoder = JSONEncoder()
@@ -64,7 +64,8 @@ class FontInfoController {
         return faceCount
     }
     
-    init() {
+    override init() {
+        super.init()
         fontInfo.fontFamilies = getFamiles(from: fontInfo.allFontFamilies)
     }
     
@@ -117,5 +118,21 @@ class FontInfoController {
                 print("!!!")
             }
         }
+    }
+}
+
+extension FontInfoController: NSCollectionViewDataSource {
+    
+    func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+        let thisFamily = fontInfo.fontFamilies[section]
+        return thisFamily.fonts.count
+    }
+
+    func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+        let thisFamily = fontInfo.fontFamilies[indexPath.section]
+        let thisFontName = thisFamily.fonts[indexPath.item]
+        let fontCell = FontCollectionViewItem()
+        fontCell.fontName = thisFontName
+        return fontCell
     }
 }

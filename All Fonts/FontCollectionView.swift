@@ -6,14 +6,15 @@
 //  Copyright © 2018 Michael Critz. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
 class FontCollectionView: NSCollectionView {
+    
+    let fontInfoCtlr = FontInfoController()
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
-        // Drawing code here.
+        self.dataSource = fontInfoCtlr
     }
     
 }

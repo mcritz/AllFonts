@@ -19,6 +19,12 @@
 		0FBF35732094CDE600CBCAFA /* FontCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */; };
 		0FBF35742094CDE600CBCAFA /* FontCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */; };
 		0FBF35752094CDE600CBCAFA /* FontCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */; };
+		0FBF35782096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */; };
+		0FBF35792096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */; };
+		0FBF357A2096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */; };
+		0FBF357B2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FBF35772096639B00CBCAFA /* FontCollectionViewItem.xib */; };
+		0FBF357C2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FBF35772096639B00CBCAFA /* FontCollectionViewItem.xib */; };
+		0FBF357D2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FBF35772096639B00CBCAFA /* FontCollectionViewItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,8 @@
 		0FABE3EC208025810075B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FABE3F82080271F0075B25D /* FontInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontInfoController.swift; sourceTree = "<group>"; };
 		0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCollectionView.swift; sourceTree = "<group>"; };
+		0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCollectionViewItem.swift; sourceTree = "<group>"; };
+		0FBF35772096639B00CBCAFA /* FontCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontCollectionViewItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		0FABE3CB2080257F0075B25D /* All Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0F39C96A2080E3E8004D0F9F /* AllMacFonts.playground */,
 				0FABE3CC2080257F0075B25D /* AppDelegate.swift */,
 				0FABE3CE2080257F0075B25D /* ViewController.swift */,
 				0FABE3D0208025810075B25D /* Assets.xcassets */,
@@ -112,8 +121,9 @@
 				0FABE3D5208025810075B25D /* Info.plist */,
 				0FABE3D6208025810075B25D /* All_Fonts.entitlements */,
 				0FABE3F82080271F0075B25D /* FontInfoController.swift */,
-				0F39C96A2080E3E8004D0F9F /* AllMacFonts.playground */,
 				0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */,
+				0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */,
+				0FBF35772096639B00CBCAFA /* FontCollectionViewItem.xib */,
 			);
 			path = "All Fonts";
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBF357B2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */,
 				0FABE3D1208025810075B25D /* Assets.xcassets in Resources */,
 				0FABE3D4208025810075B25D /* Main.storyboard in Resources */,
 			);
@@ -249,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBF357C2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBF357D2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +282,7 @@
 				0FABE3CF2080257F0075B25D /* ViewController.swift in Sources */,
 				0FBF35732094CDE600CBCAFA /* FontCollectionView.swift in Sources */,
 				0FABE3F92080271F0075B25D /* FontInfoController.swift in Sources */,
+				0FBF35782096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */,
 				0FABE3CD2080257F0075B25D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBF35792096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */,
 				0FABE3FA2080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FBF35742094CDE600CBCAFA /* FontCollectionView.swift in Sources */,
 				0FABE3E0208025810075B25D /* All_FontsTests.swift in Sources */,
@@ -287,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBF357A2096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */,
 				0FABE3FB2080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FBF35752094CDE600CBCAFA /* FontCollectionView.swift in Sources */,
 				0FABE3EB208025810075B25D /* All_FontsUITests.swift in Sources */,
