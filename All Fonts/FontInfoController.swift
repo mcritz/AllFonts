@@ -137,7 +137,7 @@ extension FontInfoController: NSCollectionViewDataSource {
         let thisFontName = thisFamily.fonts[indexPath.item]
         let fontCell = FontCollectionViewItem()
         fontCell.fontName = thisFontName
-        print("\(indexPath.section) \(indexPath.item) : \(thisFontName)")
+//        print("\(indexPath.section) \(indexPath.item) : \(thisFontName)")
         return fontCell
     }
 }
