@@ -14,10 +14,10 @@ class FontCollectionView: NSCollectionView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        self.dataSource = fontInfoCtlr
     }
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
-        self.wantsLayer = true
+        self.dataSource = fontInfoCtlr
+        self.wantsLayer = false
     }
 }
