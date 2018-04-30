@@ -123,6 +123,10 @@ class FontInfoController: NSObject {
 
 extension FontInfoController: NSCollectionViewDataSource {
     
+    func numberOfSections(in collectionView: NSCollectionView) -> Int {
+        return fontInfo.allFontFamilies.count
+    }
+    
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         let thisFamily = fontInfo.fontFamilies[section]
         return thisFamily.fonts.count
@@ -133,6 +137,7 @@ extension FontInfoController: NSCollectionViewDataSource {
         let thisFontName = thisFamily.fonts[indexPath.item]
         let fontCell = FontCollectionViewItem()
         fontCell.fontName = thisFontName
+        print("\(indexPath.section) \(indexPath.item) : \(thisFontName)")
         return fontCell
     }
 }

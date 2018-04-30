@@ -17,7 +17,12 @@ class FontCollectionViewItem: NSCollectionViewItem {
         super.viewDidLoad()
         if let fontName = fontName {
             fontLabel.stringValue = fontName
+            attributedString(fontName: fontName)
         }
+    }
+    func attributedString(fontName: String) {
+        let theFont = NSFont(name: fontName, size: 24)
+        fontLabel.font = theFont
     }
 }
 
