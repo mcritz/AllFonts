@@ -785,7 +785,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="158"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="2j0-UO-ePD">
-                                                <size key="itemSize" width="350" height="50"/>
+                                                <size key="itemSize" width="350" height="120"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </collectionView>

@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="FontCollectionViewItem" customModule="All_Fonts" customModuleProvider="target">
             <connections>
                 <outlet property="fontLabel" destination="Ffi-Zz-ddS" id="mBv-S8-FAf"/>
+                <outlet property="titleLabel" destination="9z8-DW-vOP" id="Tal-o0-7K2"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -15,11 +16,20 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <collectionViewItem id="Jqn-hn-TJO" customClass="FontCollectionViewItem" customModule="All_Fonts" customModuleProvider="target"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9z8-DW-vOP">
+                    <rect key="frame" x="12" y="83" width="320" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Description" id="IV8-LY-fuN">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0f-VQ-UgF" userLabel="FontLabel">
-                    <rect key="frame" x="-2" y="0.0" width="254" height="40"/>
+                    <rect key="frame" x="12" y="20" width="320" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Ffi-Zz-ddS">
                         <font key="font" metaFont="system"/>

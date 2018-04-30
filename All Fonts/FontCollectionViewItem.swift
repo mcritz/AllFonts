@@ -12,10 +12,13 @@ class FontCollectionViewItem: NSCollectionViewItem {
     var fontName: String?
     
     @IBOutlet weak var fontLabel: NSTextFieldCell!
+    @IBOutlet weak var titleLabel: NSTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let fontName = fontName {
+            titleLabel.stringValue = fontName
             fontLabel.stringValue = fontName
             attributedString(fontName: fontName)
         }
