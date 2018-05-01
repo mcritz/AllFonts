@@ -140,13 +140,16 @@ extension FontInfoController: NSCollectionViewDataSource {
         print("\(indexPath.section) \(indexPath.item) : \(thisFontName)")
         return fontCell
     }
+    
     func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: NSCollectionView.SupplementaryElementKind, at indexPath: IndexPath) -> NSView {
-        let someView = NSView(frame: NSRect(origin: CGPoint.zero, size: CGSize(width: 700, height: 40)))
-        let someLabel = NSTextField(labelWithString: fontInfo.allFontFamilies[indexPath.section])
-        someView.addSubview(someLabel)
-        if kind == .sectionHeader {
-            print("HEADER \(indexPath.section) : \(indexPath.item) : \(fontInfo.allFontFamilies[indexPath.section])")
-        }
-        return someView
+        
+        let supplementaryView = collectionView.makeSupplementaryView(ofKind: .sectionHeader, withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "FontCollectionHeader"), for: indexPath)
+//        if kind == .sectionHeader {
+            if let supplementaryView = supplementaryView as? FontCollectionHeaderView {
+                supplementaryView.headerLabel.stringValue = fontInfo.allFontFamilies[indexPath.section]
+            }
+            print("HEADER \(indexPath.section) : \(indexPath.item) : \(fontInfo.allFontFamilies[indexPath.section])\n")
+//        }
+        return supplementaryView
     }
 }

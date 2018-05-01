@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="FontCollectionHeaderView" customModule="All_Fonts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="shp-0s-AHq">
+                    <rect key="frame" x="-2" y="127" width="484" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="hyE-2L-Chj">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="shp-0s-AHq" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="APU-Hq-tuf"/>
+                <constraint firstItem="shp-0s-AHq" firstAttribute="width" secondItem="c22-O7-iKe" secondAttribute="width" id="HzT-Yj-oom"/>
+                <constraint firstItem="shp-0s-AHq" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="ROF-ZW-xnn"/>
+            </constraints>
+            <connections>
+                <outlet property="headerLabel" destination="shp-0s-AHq" id="lQ7-2x-7Zh"/>
+            </connections>
+        </customView>
+    </objects>
+</document>
