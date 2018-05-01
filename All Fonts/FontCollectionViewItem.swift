@@ -10,6 +10,7 @@ import Cocoa
 
 class FontCollectionViewItem: NSCollectionViewItem {
     var fontName: String?
+    var expositionText = "Pack my box with five dozen liquor jugs"
     
     @IBOutlet weak var fontLabel: NSTextFieldCell!
     @IBOutlet weak var titleLabel: NSTextField!
@@ -19,7 +20,7 @@ class FontCollectionViewItem: NSCollectionViewItem {
         super.viewDidLoad()
         if let fontName = fontName {
             titleLabel.stringValue = fontName
-            fontLabel.stringValue = fontName
+            fontLabel.stringValue = expositionText
             attributedString(fontName: fontName)
         }
     }

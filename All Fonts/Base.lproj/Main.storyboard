@@ -785,8 +785,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="158"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="mTY-y1-lpy">
-                                                <size key="itemSize" width="350" height="120"/>
+                                                <size key="itemSize" width="800" height="120"/>
                                                 <size key="headerReferenceSize" width="0.0" height="20"/>
+                                                <edgeInsets key="sectionInset" left="10" right="10" top="0.0" bottom="0.0"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                         </collectionView>
