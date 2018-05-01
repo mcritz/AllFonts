@@ -710,7 +710,7 @@
                             <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-ou-wFj">
                                 <rect key="frame" x="18" y="45" width="444" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" priority="250" constant="440" id="IqB-nH-VxI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="250" constant="440" id="IqB-nH-VxI"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="250" id="TND-X3-ZTT"/>
                                 </constraints>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="1Me-JZ-jnH">
