@@ -19,7 +19,7 @@ class FontCollectionView: NSCollectionView {
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
         self.dataSource = fontInfoCtlr
-        self.wantsLayer = false
+        self.wantsLayer = true
     }
 }
 

@@ -22,6 +22,12 @@
 		0FABE3F92080271F0075B25D /* FontInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontInfoController.swift */; };
 		0FABE3FA2080271F0075B25D /* FontInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontInfoController.swift */; };
 		0FABE3FB2080271F0075B25D /* FontInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FABE3F82080271F0075B25D /* FontInfoController.swift */; };
+		0FB762F42098FDED00F5D86B /* FontColletionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB762F22098FDED00F5D86B /* FontColletionFooter.swift */; };
+		0FB762F52098FDED00F5D86B /* FontColletionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB762F22098FDED00F5D86B /* FontColletionFooter.swift */; };
+		0FB762F62098FDED00F5D86B /* FontColletionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB762F22098FDED00F5D86B /* FontColletionFooter.swift */; };
+		0FB762F72098FDED00F5D86B /* FontColletionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB762F32098FDED00F5D86B /* FontColletionFooter.xib */; };
+		0FB762F82098FDED00F5D86B /* FontColletionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB762F32098FDED00F5D86B /* FontColletionFooter.xib */; };
+		0FB762F92098FDED00F5D86B /* FontColletionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB762F32098FDED00F5D86B /* FontColletionFooter.xib */; };
 		0FBF35732094CDE600CBCAFA /* FontCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */; };
 		0FBF35742094CDE600CBCAFA /* FontCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */; };
 		0FBF35752094CDE600CBCAFA /* FontCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */; };
@@ -68,6 +74,8 @@
 		0FABE3EA208025810075B25D /* All_FontsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_FontsUITests.swift; sourceTree = "<group>"; };
 		0FABE3EC208025810075B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FABE3F82080271F0075B25D /* FontInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontInfoController.swift; sourceTree = "<group>"; };
+		0FB762F22098FDED00F5D86B /* FontColletionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontColletionFooter.swift; sourceTree = "<group>"; };
+		0FB762F32098FDED00F5D86B /* FontColletionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontColletionFooter.xib; sourceTree = "<group>"; };
 		0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCollectionView.swift; sourceTree = "<group>"; };
 		0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCollectionViewItem.swift; sourceTree = "<group>"; };
 		0FBF35772096639B00CBCAFA /* FontCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontCollectionViewItem.xib; sourceTree = "<group>"; };
@@ -130,6 +138,8 @@
 				0FABE3D6208025810075B25D /* All_Fonts.entitlements */,
 				0FABE3F82080271F0075B25D /* FontInfoController.swift */,
 				0F5104ED2098C98400DCBE92 /* FontCollectionHeader.xib */,
+				0FB762F22098FDED00F5D86B /* FontColletionFooter.swift */,
+				0FB762F32098FDED00F5D86B /* FontColletionFooter.xib */,
 				0F5104F12098C9CE00DCBE92 /* FontCollectionHeaderView.swift */,
 				0FBF35722094CDE600CBCAFA /* FontCollectionView.swift */,
 				0FBF35762096639B00CBCAFA /* FontCollectionViewItem.swift */,
@@ -264,6 +274,7 @@
 				0F5104EE2098C98400DCBE92 /* FontCollectionHeader.xib in Resources */,
 				0FABE3D1208025810075B25D /* Assets.xcassets in Resources */,
 				0FABE3D4208025810075B25D /* Main.storyboard in Resources */,
+				0FB762F72098FDED00F5D86B /* FontColletionFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +284,7 @@
 			files = (
 				0FBF357C2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */,
 				0F5104EF2098C98400DCBE92 /* FontCollectionHeader.xib in Resources */,
+				0FB762F82098FDED00F5D86B /* FontColletionFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +294,7 @@
 			files = (
 				0FBF357D2096639B00CBCAFA /* FontCollectionViewItem.xib in Resources */,
 				0F5104F02098C98400DCBE92 /* FontCollectionHeader.xib in Resources */,
+				0FB762F92098FDED00F5D86B /* FontColletionFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FB762F42098FDED00F5D86B /* FontColletionFooter.swift in Sources */,
 				0FABE3CF2080257F0075B25D /* ViewController.swift in Sources */,
 				0FBF35732094CDE600CBCAFA /* FontCollectionView.swift in Sources */,
 				0FABE3F92080271F0075B25D /* FontInfoController.swift in Sources */,
@@ -306,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FBF35792096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */,
+				0FB762F52098FDED00F5D86B /* FontColletionFooter.swift in Sources */,
 				0F5104F32098C9CE00DCBE92 /* FontCollectionHeaderView.swift in Sources */,
 				0FABE3FA2080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FBF35742094CDE600CBCAFA /* FontCollectionView.swift in Sources */,
@@ -318,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FBF357A2096639B00CBCAFA /* FontCollectionViewItem.swift in Sources */,
+				0FB762F62098FDED00F5D86B /* FontColletionFooter.swift in Sources */,
 				0F5104F42098C9CE00DCBE92 /* FontCollectionHeaderView.swift in Sources */,
 				0FABE3FB2080271F0075B25D /* FontInfoController.swift in Sources */,
 				0FBF35752094CDE600CBCAFA /* FontCollectionView.swift in Sources */,
