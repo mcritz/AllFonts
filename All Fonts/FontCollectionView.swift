@@ -17,12 +17,3 @@ class FontCollectionView: NSCollectionView {
         self.wantsLayer = true
     }
 }
-
-//extension FontCollectionView: NSCollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
-//        return NSSize(width: 350, height: 120)
-//    }
-//    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
-//        return NSSize(width: 700, height: 40)
-//    }
-//}
