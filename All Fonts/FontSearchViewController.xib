@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FontSearchViewController" customModule="All_Fonts" customModuleProvider="target">
+            <connections>
+                <outlet property="fontSerachField" destination="yi7-At-sJh" id="ERe-Vq-MfS"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+            <subviews>
+                <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yi7-At-sJh">
+                    <rect key="frame" x="20" y="18" width="440" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="RHl-wq-OU6"/>
+                    </constraints>
+                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="B2h-33-5NC">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </searchFieldCell>
+                </searchField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yi7-At-sJh" secondAttribute="trailing" constant="20" id="cRO-TW-eOU"/>
+                <constraint firstItem="yi7-At-sJh" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="hEU-Xc-Ed5"/>
+                <constraint firstItem="yi7-At-sJh" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="jN9-eB-3Lx"/>
+            </constraints>
+            <point key="canvasLocation" x="187" y="161"/>
+        </customView>
+    </objects>
+</document>
