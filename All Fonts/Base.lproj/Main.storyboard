@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -778,19 +779,19 @@
         <!--Fonts-->
         <scene sceneID="4k5-CD-cN8">
             <objects>
-                <viewController title="Fonts" id="2Uf-uf-BXv" userLabel="Fonts" sceneMemberID="viewController">
+                <viewController title="Fonts" id="2Uf-uf-BXv" userLabel="Fonts" customClass="FontCollectionViewController" customModule="All_Fonts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="9xH-Xd-tYM">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qZ-9i-ZaC">
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qZ-9i-ZaC">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" drawsBackground="NO" id="BSF-8F-bvS">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="TTu-0x-Zx0" customClass="FontCollectionView" customModule="All_Fonts" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="20" id="mTY-y1-lpy">
                                                 <size key="itemSize" width="350" height="170"/>
@@ -803,23 +804,39 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                 </clipView>
+                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="60" bottom="0.0"/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="h3B-86-w2s">
-                                    <rect key="frame" x="1" y="283" width="448" height="16"/>
+                                    <rect key="frame" x="-100" y="-100" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="nmd-D7-pGc">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="nmd-D7-pGc">
+                                    <rect key="frame" x="434" y="60" width="16" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xP-gC-RLF">
+                                <rect key="frame" x="105" y="258" width="240" height="22"/>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="6qg-J2-CKd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </searchFieldCell>
+                            </searchField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="9xP-gC-RLF" firstAttribute="top" secondItem="9xH-Xd-tYM" secondAttribute="top" constant="20" id="LBh-Lj-pxl"/>
+                            <constraint firstItem="9xP-gC-RLF" firstAttribute="width" secondItem="9xH-Xd-tYM" secondAttribute="height" multiplier="1:1.25" id="M0c-0M-Ogu"/>
                             <constraint firstItem="3qZ-9i-ZaC" firstAttribute="height" secondItem="9xH-Xd-tYM" secondAttribute="height" id="NMC-3b-EIZ"/>
                             <constraint firstItem="3qZ-9i-ZaC" firstAttribute="width" secondItem="9xH-Xd-tYM" secondAttribute="width" id="Nvw-eE-omT"/>
-                            <constraint firstItem="3qZ-9i-ZaC" firstAttribute="top" secondItem="9xH-Xd-tYM" secondAttribute="top" id="aVN-M3-jNk"/>
+                            <constraint firstItem="9xP-gC-RLF" firstAttribute="centerX" secondItem="9xH-Xd-tYM" secondAttribute="centerX" id="Q7v-iA-leH"/>
                             <constraint firstItem="3qZ-9i-ZaC" firstAttribute="leading" secondItem="9xH-Xd-tYM" secondAttribute="leading" id="ddH-bF-zFg"/>
+                            <constraint firstItem="3qZ-9i-ZaC" firstAttribute="top" secondItem="9xH-Xd-tYM" secondAttribute="top" id="lFQ-EM-IQb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FontSearchFIeld" destination="9xP-gC-RLF" id="NnP-7e-6Kl"/>
+                        <outlet property="fontCollectionView" destination="TTu-0x-Zx0" id="ae6-er-NMA"/>
+                    </connections>
                 </viewController>
                 <customObject id="KrJ-tM-DbF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

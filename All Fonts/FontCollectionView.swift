@@ -9,16 +9,11 @@
 import AppKit
 
 class FontCollectionView: NSCollectionView {
-    
-    let fontInfoCtlr = FontInfoController()
-
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        reloadData()
     }
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
-        self.dataSource = fontInfoCtlr
         self.wantsLayer = true
     }
 }
