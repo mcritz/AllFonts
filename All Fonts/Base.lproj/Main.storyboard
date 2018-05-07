@@ -834,8 +834,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="FontSearchFIeld" destination="9xP-gC-RLF" id="NnP-7e-6Kl"/>
                         <outlet property="fontCollectionView" destination="TTu-0x-Zx0" id="ae6-er-NMA"/>
+                        <outlet property="fontSearchField" destination="9xP-gC-RLF" id="NnP-7e-6Kl"/>
                     </connections>
                 </viewController>
                 <customObject id="KrJ-tM-DbF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -56,6 +56,20 @@ class FontInfoController: NSObject {
         return fontFamilies
     }
     
+    func getThings(matching query: String) -> [FontFamily] {
+        if query.count == 0 {
+            return getFamiles(from: fontInfo.allFontFamilies)
+        }
+        
+        var fontFamilies = [FontFamily]()
+        for familyName in fontInfo.allFontFamilies {
+            if familyName.contains(query) {
+                fontFamilies.append(makeFontFamily(with: familyName))
+            }
+        }
+        return fontFamilies
+    }
+    
     private func countFaces(in fontFamilies: [FontFamily]) -> Int {
         var faceCount = 0
         for fontFamily in fontFamilies {
@@ -77,9 +91,10 @@ class FontInfoController: NSObject {
         Font Faces: \(countFaces(in: fontInfo.fontFamilies))
         """
     }
-    
-    // Mark - Saving
-    
+}
+
+// All about saving files
+extension FontInfoController {
     func getJSON(from data: [FontFamily]?) throws -> Data?  {
         var fontFamilies = data
         if data?.count == nil {
@@ -118,45 +133,5 @@ class FontInfoController: NSObject {
                 print("!!!")
             }
         }
-    }
-}
-
-extension FontInfoController: NSCollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return fontInfo.allFontFamilies.count
-    }
-    
-    func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        let thisFamily = fontInfo.fontFamilies[section]
-        return thisFamily.fonts.count
-    }
-
-    func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let thisFamily = fontInfo.fontFamilies[indexPath.section]
-        let thisFontName = thisFamily.fonts[indexPath.item]
-        let fontCell = FontCollectionViewItem()
-        fontCell.fontName = thisFontName
-//        print("\(indexPath.section) \(indexPath.item) : \(thisFontName)")
-        return fontCell
-    }
-    
-    func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: NSCollectionView.SupplementaryElementKind, at indexPath: IndexPath) -> NSView {
-        
-        var nibIdentifier = "FontColletionFooter"
-        
-        switch kind {
-        case NSCollectionView.SupplementaryElementKind.sectionHeader:
-            nibIdentifier = "FontCollectionHeader"
-        default:
-            nibIdentifier = "FontColletionFooter"
-        }
-        
-        let supplementaryView = collectionView.makeSupplementaryView(ofKind: kind, withIdentifier: NSUserInterfaceItemIdentifier(rawValue: nibIdentifier), for: indexPath)
-        if let supplementaryView = supplementaryView as? FontCollectionHeaderView {
-            supplementaryView.headerLabel.stringValue = fontInfo.allFontFamilies[indexPath.section]
-        }
-//            print("HEADER \(indexPath.section) : \(indexPath.item) : \(fontInfo.allFontFamilies[indexPath.section])\n")
-        return supplementaryView
     }
 }
