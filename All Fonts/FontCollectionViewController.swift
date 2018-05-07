@@ -12,12 +12,14 @@ class FontCollectionViewController: NSViewController, NSSearchFieldDelegate, NSC
 
     @IBOutlet weak var fontSearchField: NSSearchField!
     @IBOutlet weak var fontCollectionView: FontCollectionView!
-
+    @IBOutlet weak var noSearchResultsLabel: NSTextField!
+    
     let fontInfoCtlr = FontInfoController()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        noSearchResultsLabel.isHidden = true
         fontCollectionView.dataSource = self
         fontSearchField.sendsWholeSearchString = false
         fontSearchField.sendsSearchStringImmediately = false
@@ -32,9 +34,12 @@ class FontCollectionViewController: NSViewController, NSSearchFieldDelegate, NSC
                 someFonts.append(fontName)
             }
         }
-        print(someFonts)
-
         fontInfoCtlr.fontInfo.fontFamilies = fontFamilies
+        if fontFamilies.count == 0 {
+            noSearchResultsLabel.isHidden = false
+        } else {
+            noSearchResultsLabel.isHidden = true
+        }
         fontCollectionView.reloadData()
     }
     func searchFieldDidEndSearching(_ sender: NSSearchField) {
